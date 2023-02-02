@@ -1,0 +1,152 @@
+2023-02-02 13:17:33.923 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:17:33.959 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:17:33.984 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2023-02-02 13:17:34.778 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=793.79[ms]
+2023-02-02 13:17:34.853 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=893.87[ms]
+2023-02-02 13:17:34.853 - INFO - 36682 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2023-02-02 13:17:36.781 - CRITICAL - 36682 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: PermissionError
+Message: [Errno 1] Operation not permitted: '/anaconda/envs/azureml_py38/lib/python3.8/site-packages/nimbusml/internal/libs/pybridge.so'
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 6, in <module>
+    from .forecasting_pipeline_wrapper import RegressionPipeline, ForecastingPipelineWrapper
+  File "forecasting_pipeline_wrapper.py", line 10, in <module>
+    import nimbusml
+  File "__init__.py", line 33, in <module>
+    os.chmod(dotso, 0o755)
+
+ExceptionTarget: Unspecified
+2023-02-02 13:17:37.046 - CRITICAL - 36682 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: PermissionError
+Message: [Errno 1] Operation not permitted: '/anaconda/envs/azureml_py38/lib/python3.8/site-packages/nimbusml/internal/libs/pybridge.so'
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 6, in <module>
+    from .forecasting_pipeline_wrapper import RegressionPipeline, ForecastingPipelineWrapper
+  File "forecasting_pipeline_wrapper.py", line 10, in <module>
+    import nimbusml
+  File "__init__.py", line 33, in <module>
+    os.chmod(dotso, 0o755)
+
+ExceptionTarget: Unspecified
+2023-02-02 13:17:37.046 - INFO - 36682 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=2193.01[ms]
+2023-02-02 13:17:37.047 - CRITICAL - 36682 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: PermissionError
+Message: [Errno 1] Operation not permitted: '/anaconda/envs/azureml_py38/lib/python3.8/site-packages/nimbusml/internal/libs/pybridge.so'
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 6, in <module>
+    from .forecasting_pipeline_wrapper import RegressionPipeline, ForecastingPipelineWrapper
+  File "forecasting_pipeline_wrapper.py", line 10, in <module>
+    import nimbusml
+  File "__init__.py", line 33, in <module>
+    os.chmod(dotso, 0o755)
+
+ExceptionTarget: Unspecified
+2023-02-02 13:17:37.048 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=3124.94[ms]
+2023-02-02 13:19:12.817 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:19:12.842 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:19:12.867 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2023-02-02 13:19:13.455 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=587.98[ms]
+2023-02-02 13:19:13.594 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=752.36[ms]
+2023-02-02 13:19:13.595 - INFO - 36682 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2023-02-02 13:19:14.539 - CRITICAL - 36682 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: PermissionError
+Message: [Errno 1] Operation not permitted: '/anaconda/envs/azureml_py38/lib/python3.8/site-packages/nimbusml/internal/libs/pybridge.so'
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 6, in <module>
+    from .forecasting_pipeline_wrapper import RegressionPipeline, ForecastingPipelineWrapper
+  File "forecasting_pipeline_wrapper.py", line 10, in <module>
+    import nimbusml
+  File "__init__.py", line 33, in <module>
+    os.chmod(dotso, 0o755)
+
+ExceptionTarget: Unspecified
+2023-02-02 13:19:14.766 - CRITICAL - 36682 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: PermissionError
+Message: [Errno 1] Operation not permitted: '/anaconda/envs/azureml_py38/lib/python3.8/site-packages/nimbusml/internal/libs/pybridge.so'
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 6, in <module>
+    from .forecasting_pipeline_wrapper import RegressionPipeline, ForecastingPipelineWrapper
+  File "forecasting_pipeline_wrapper.py", line 10, in <module>
+    import nimbusml
+  File "__init__.py", line 33, in <module>
+    os.chmod(dotso, 0o755)
+
+ExceptionTarget: Unspecified
+2023-02-02 13:19:14.766 - INFO - 36682 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=1171.58[ms]
+2023-02-02 13:19:14.767 - CRITICAL - 36682 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: PermissionError
+Message: [Errno 1] Operation not permitted: '/anaconda/envs/azureml_py38/lib/python3.8/site-packages/nimbusml/internal/libs/pybridge.so'
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 6, in <module>
+    from .forecasting_pipeline_wrapper import RegressionPipeline, ForecastingPipelineWrapper
+  File "forecasting_pipeline_wrapper.py", line 10, in <module>
+    import nimbusml
+  File "__init__.py", line 33, in <module>
+    os.chmod(dotso, 0o755)
+
+ExceptionTarget: Unspecified
+2023-02-02 13:19:14.767 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=1949.82[ms]
+2023-02-02 13:27:26.485 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:27:26.520 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:27:26.545 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2023-02-02 13:27:26.953 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=408.09[ms]
+2023-02-02 13:27:27.157 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=637.03[ms]
+2023-02-02 13:27:27.157 - INFO - 36682 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2023-02-02 13:27:31.554 - INFO - 36682 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=4396.6[ms]
+2023-02-02 13:27:31.569 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=5084.52[ms]
+2023-02-02 13:29:58.169 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:29:58.195 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:29:58.219 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2023-02-02 13:32:21.523 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=143304.58[ms]
+2023-02-02 13:32:21.526 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=143331.38[ms]
+2023-02-02 13:32:21.534 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=143364.95[ms]
+2023-02-02 13:33:22.212 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:33:22.235 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:33:22.264 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2023-02-02 13:42:58.218 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=575954.72[ms]
+2023-02-02 13:42:58.227 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=575991.76[ms]
+2023-02-02 13:42:58.228 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=576016.34[ms]
+2023-02-02 13:46:54.859 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:46:54.883 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-02-02 13:46:54.905 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2023-02-02 13:46:56.013 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=1108.0[ms]
+2023-02-02 13:46:56.116 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=1232.77[ms]
+2023-02-02 13:46:56.117 - INFO - 36682 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2023-02-02 13:46:58.015 - INFO - 36682 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=1898.25[ms]
+2023-02-02 13:46:58.023 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=3163.57[ms]
+2023-02-02 13:51:45.515 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: RegisterModel
+2023-02-02 13:51:45.535 - INFO - 36682 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2023-02-02 13:51:46.354 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=819.58[ms]
+2023-02-02 13:51:49.032 - INFO - 36682 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=RegisterModel, HowEnded=Success, Duration=3516.52[ms]
