@@ -18,26 +18,12 @@ we will be create a classification model that can accurately predict fatality fr
 In accessing the workspace that was used for the project, I navigated to the azure portal and created an workspace Ml workspace with all neccesary requirements. I logged into my workspace and downloaded the config.json file which was used to specify my workspace during the project.
 
 ## Automated ML
-Below is the configuration used for the autoML experiment.
-```
-automl_settings = {"experiment_timeout_minutes": 30,
-                   "max_concurrent_iterations": 4,
-                   "primary_metric" : 'accuracy'}
-___________________________________________________
-automl_config = AutoMLConfig(task = "classification",
-                             training_data=dataset,
-                             label_column_name="DEATH_EVENT",   
-                             path = project_folder,
-                             compute_target=compute_target,
-                             enable_early_stopping= True,
-                             featurization= 'off',
-                             enable_onnx_compatible_models=True,
-                             debug_log = "automl_errors.log",
-                             **automl_settings)
-```
+For the configuration of the AutoMl experiement. Due to limited resources, I set the timeout to 30minutes. The primary metric is also set to accuracy. The target columns was also specified and the tack had bee set into classification. I have also set the exported model to be ONNX compatible. Its is important to note that improvements can be made to this model. Innitially i said we could increase the timeout time. Another technique can be to focus not on model accuaracy, but model precision because even if this models are able to predict all the DEATH_EVENT classes as 0(i.e, Not death), the model will still have an high accuracy since there are more 0's than 1's in the dataset.
+![Image](sdk-automldone.png)
+![Image](sdk-automl_bestmodel_runID.png)
+
 ### Results
 The autoMl experiment provided us with a model with its accuracy of 88%
-Its is important to note that improvements can be made to this model. Innitially i said we could increase the timeout time. Another techniqu can be to focus not on model accuaracy, but model precision because even if this models are able to predict all the DEATH_EVENT classes as 0(i.e, Not death), the model will still have an high accuracy since there are more 0's than 1's in the dataset.
 ```
 Best run: Run(Experiment: ml-exp,
 Id: AutoML_a5a4edd9-1f2f-42fd-9cab-60df0b1cd4a9_59,
