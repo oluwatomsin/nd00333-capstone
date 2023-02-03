@@ -1,6 +1,8 @@
 # Heart Failure Prediction
 In this project, I am building a model that can accurately classify between patients that died by heart failure and those that didin't. You could be wondering why this is neccesary; but main goal of this project is to create a model that can be used to detecting patients at high risk of fatality from high blood pressure.
 
+# Project Architecture
+
 
 ## Project Set Up and Installation
 In this project, I created a compute instance (for running our notebooks) and a compute instance from the Azure ML studio console for deploying my model and performing experiments. I also loaded the [dataset](https://www.kaggle.com/datasets/andrewmvd/heart-failure-clinical-data) from my local drive into the datastore.
@@ -85,5 +87,8 @@ data = {
 ![Image](request1.png)
 ![Image](request2.png)
 ![Image](request3.png)
+## How to improve the project in the future
+In a future project. we can decide to increase the time out of the AutoML model which although consumes a lot of resources, could provide us with a more accurate model. Also, we could change the primary metric from accuracy to precision to mitigate possible model bias to a particular class.
+
 ## Screen Recording
 [Link to recording](https://drive.google.com/file/d/1fYRqO6xzmKY5gqsnNsz-fZDjez0IT_t3/view?usp=sharing)
