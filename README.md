@@ -21,8 +21,9 @@ In accessing the workspace that was used for the project, I navigated to the azu
 
 ## Automated ML
 For the configuration of the AutoMl experiement. Due to limited resources, I set the timeout to 30minutes. The primary metric is also set to accuracy. The target columns was also specified and the tack had bee set into classification. I have also set the exported model to be ONNX compatible. Its is important to note that improvements can be made to this model. Innitially i said we could increase the timeout time. Another technique can be to focus not on model accuaracy, but model precision because even if this models are able to predict all the DEATH_EVENT classes as 0(i.e, Not death), the model will still have an high accuracy since there are more 0's than 1's in the dataset.
-![Image](sdk-automldone.png)
-![Image](sdk-automl_bestmodel_runID.png)
+![Image](AutoMLwidget1.png)
+![Image](AutoMLwidget2.png)
+![Image](AutoMLwidget3.png)
 
 ### Results
 The autoMl experiment provided us with a model with its accuracy of 88%
@@ -37,8 +38,6 @@ Best fitted model: Pipeline(memory=None,
          verbose=False)
 
 ```
-![Image](sdk-automldone.png)
-
 ## Hyperparameter Tuning
  For this part of the project I chose LogisticRegression as the model to be tuned because it historically performs really good on classification. I oprimized the model using the "C" and the "max_iter". Below is the code sample
  ```
